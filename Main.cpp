@@ -9,7 +9,7 @@ using std::cin;       // so we can write cin instead of std::cin
 using std::endl;      // so we can write endl instead of std::endl
 
 // a function to check if a character is a digit
-// returns true if character is '0' through '9', false otherwise
+// returns true if character is '0' through '9' and if else it returns false
 bool isDigit(char character) {
     return character >= '0' && character <= '9';
 }
@@ -74,7 +74,7 @@ bool isDouble(const string & string) {
 // returns 1 if A > B
 // returns 0 if they are equal
 // returns -1 if A < B
-int compareMagnitudes(const string &stringA, const string &remainderA, const string &stringB, const string &remainderB) {
+int compareMagnitudes(const string & stringA, const string & remainderA, const string & stringB, const string & remainderB) {
     int intA = 0;
     while (intA < (int) stringA.size() && stringA[intA] == '0') {   // remove leading zeros from integer parts
         ++intA;
@@ -552,4 +552,5 @@ int main() {
 
     file.close(); // close file
     return 0; // end program
+
 }
